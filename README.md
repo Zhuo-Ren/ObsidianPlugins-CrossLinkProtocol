@@ -1,0 +1,1 @@
+# ObsidianPlugins-CrossLinkProtocol
