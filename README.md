@@ -25,7 +25,8 @@
 * 打开注册表编辑器
 * 在`计算机\HKEY_CLASSES_ROOT`下建立如下的注册表结构（cl代表cross link）：
   ![](./regedit.png)
-* 在cl项下新建字符串值URL Protocol，值是空字符串：
+* 在cl项下新建字符串值URL Protocol，值是空字符串。
+* 在cl项下的默认值改为`URL:cl`。
 * 把DefaultIcon项下的默认值改为要调用的语言引擎路径。我们是基于python实现，所以这里写python解释器的路径`D:\ProgramFiles\anaconda3\python.exe`。
 * 把command项下的默认值改为`D:\ProgramFiles\anaconda3\python.exe D:\ProgramFiles\CrossLink\ObsidianPlugins-CrossLinkProtocol\main.py %1`：
 * 至此协议就注册完毕，以后访问“cl://20230429163000/def”这样的URL时，就会在命令行运行`D:\ProgramFiles\anaconda3\python.exe D:\ProgramFiles\CrossLink\ObsidianPlugins-CrossLinkProtocol\main.py %1`这样的指令。
